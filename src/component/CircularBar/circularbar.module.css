@@ -1,0 +1,33 @@
+.container {
+  position: relative;
+}
+
+.circle {
+  stroke-dashoffset: 159.516;
+  transform-origin: 50px 50px;
+  transition: stroke-dashoffset 0.3s ease 0s, stroke-dasharray 0.3s ease 0s,
+    stroke 0.3s ease 0s, stroke-width 0.06s ease 0.3s, opacity ease 0s;
+  fill-opacity: 0;
+  stroke-width: 5px;
+}
+
+.circle1 {
+  transform: rotate(127.5deg);
+}
+
+.circle2 {
+  transform: rotate(222.5deg);
+}
+
+.circle3 {
+  transform: rotate(317.5deg);
+}
+
+.score {
+    inset: 0%;
+    position: absolute;
+    top: 34%;
+    text-align: center;
+    font-weight: 600;
+    font-size: 24px;
+}

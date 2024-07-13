@@ -1,0 +1,167 @@
+.container {
+  max-width: 1300px;
+  margin: auto;
+  padding: 40px 40px;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.filter {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.dateRange {
+  display: flex;
+  gap: 10px;
+}
+
+.datepicker {
+  display: inline-flex;
+  position: relative;
+  overflow: clip;
+  border: 1px solid rgba(226, 226, 226, 1);
+  padding: 10px 40px;
+  border-radius: 10px;
+  font-size: 16px;
+  color: rgba(112, 112, 112, 1);
+}
+
+.datepicker:focus-within {
+  outline: none;
+}
+.datepicker > input[type="date"] {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 300%;
+  height: 100%;
+  opacity: 0;
+  cursor: pointer;
+}
+.datepicker > input[type="date"]::-webkit-calendar-picker-indicator {
+  position: absolute;
+  top: -150%;
+  left: -150%;
+  width: 300%;
+  height: 300%;
+  cursor: pointer;
+}
+
+.filterBtn {
+  border-radius: 12px;
+  background-color: rgba(23, 162, 184, 1);
+  padding: 10px 50px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+  color: white;
+}
+
+.reset {
+  border-radius: 12px;
+  padding: 10px 44px;
+  font-size: 16px;
+  box-shadow: 0px 2px 12px 0px rgba(130, 105, 140, 0.2);
+  border: 1px solid rgba(207, 54, 54, 1);
+  color: rgba(207, 54, 54, 1);
+  cursor: pointer;
+  background-color: white;
+}
+
+.twubricContainer {
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  gap: 10px;
+}
+
+.sortMenuContainer {
+  width: 180px;
+  position: absolute;
+  box-shadow: 0px 2px 22px 0px rgba(126, 122, 122, 0.25);
+  line-height: 21px;
+  border-radius: 12px;
+  display: grid;
+  background: white;
+  z-index: 1;
+  top: 120%;
+  left: 0%;
+}
+
+.sortMenu {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+  padding: 10px 20px;
+  border-radius: 9px;
+}
+
+.activeSort {
+  background-color: #00000005;
+}
+
+.green {
+  color: green;
+}
+
+.red {
+  color: red;
+}
+
+.sort {
+  width: 180px;
+  margin: 40px 0px;
+  box-shadow: 0px 2px 22px 0px rgba(126, 122, 122, 0.25);
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 8px;
+  position: relative;
+  text-transform: capitalize;
+}
+
+.selectedUser {
+  border: 3px solid black;
+}
+
+@media screen and (max-width: 1200px) {
+  .twubricContainer {
+    grid-template-columns: auto auto auto;
+  }
+
+  .header {
+    display: inline;
+  }
+  .filter {
+    justify-content: unset;
+    padding-bottom: 20px;
+  }
+}
+
+@media screen and (max-width: 950px) {
+  .twubricContainer {
+    grid-template-columns: auto auto;
+    justify-content: space-between;
+  }
+  .header {
+    display: inline;
+  }
+  .filter {
+    flex-direction: column;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .twubricContainer {
+    grid-template-columns: auto;
+    justify-content: center;
+  }
+}
